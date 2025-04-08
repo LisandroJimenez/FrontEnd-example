@@ -46,7 +46,7 @@ export const Login = ({switchAuthHandler}) => {
         setFormState((prevState) => ({
             ...prevState,
             [field]:{
-                ...prevState,
+                ...prevState[field],
                 isValid,
                 showError: !isValid
             }
@@ -85,7 +85,7 @@ export const Login = ({switchAuthHandler}) => {
                 />
 
                 <button onClick={handleLogin} disabled ={isSubmitButtonDisable}>
-
+                    Login
                 </button>
             </form>
             <span onClick={switchAuthHandler} className="auth-form-switch-label">

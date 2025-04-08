@@ -19,7 +19,7 @@ export const Input = ({
     }
     return (
     <>
-        <div className="auth-from-label">
+        <div className="auth-form-label">
             <span>{label}</span>
         </div>
 
