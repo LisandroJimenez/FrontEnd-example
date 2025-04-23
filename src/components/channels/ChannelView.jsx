@@ -34,8 +34,8 @@ export const ChannelView = ({getChannels}) => {
     return(
         <div className="channel-container">
             <div className="channel-video-description-section">
-                {channelDetails.isOnline ? (
-                    <Stream streamUrl={channelDetails.streamUrl}/>
+                {channelDetails.data.isOnline ? (
+                    <Stream streamUrl={channelDetails.data.streamUrl}/>
                 ) : (
                     <div className="channel-offline-placeholder">
                         <span>Channel is offline</span>
@@ -43,10 +43,10 @@ export const ChannelView = ({getChannels}) => {
                 )}
 
                 <ChannelDescription
-                    channelId={channelDetails.id}
-                    title={channelDetails.title}
-                    description={channelDetails.description}
-                    username={channelDetails.username}
+                    channelId={channelDetails.data.id}
+                    title={channelDetails.data.title}
+                    description={channelDetails.data.description}
+                    username={channelDetails.data.username}
                     getChannels={getChannels}
                 />
             </div>

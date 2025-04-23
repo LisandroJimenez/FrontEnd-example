@@ -4,7 +4,7 @@ import { getChannelDetails as getChannelDetailsRequest } from "../../services";
 
 export const useChannelDetails = ()=>{
     
-    const [channelDetails, setChannelDetails] = useState({});
+    const [channelDetails, setChannelDetails] = useState();
 
     const getChannelDetails = async (id) => {
         
